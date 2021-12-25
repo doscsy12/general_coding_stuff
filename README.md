@@ -7,4 +7,4 @@
 |   |            |                                   |
 
 1. Merry Christmas
-![Christmas tree](https://github.com/doscsy12/general_coding_stuff/blob/main/xmas_tree.jpg =250x)
+![Christmas tree](https://github.com/doscsy12/general_coding_stuff/blob/main/xmas_tree.jpg | width=100)
