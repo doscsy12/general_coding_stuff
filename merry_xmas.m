@@ -23,7 +23,7 @@ surf(X,Y,-Z*.1)
 view(3, 9), axis equal off
 
 % Initialize video
-myVideo = VideoWriter('D:\temp\myXmasTree.avi'); %open video file
+myVideo = VideoWriter('myXmasTree.avi'); %open video file
 myVideo.FrameRate = 10;  %can adjust this, 5 - 10 usually works well
 open(myVideo)
 
