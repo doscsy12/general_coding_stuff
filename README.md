@@ -7,5 +7,4 @@
 |   |            |                                   |
 
 1. Merry Christmas
-<br>
 [![Christmas tree]({https://github.com/doscsy12/general_coding_stuff/blob/main/xmas_tree.jpg})]({https://github.com/doscsy12/general_coding_stuff/blob/main/myXmasTree.avi} "Link Title")
