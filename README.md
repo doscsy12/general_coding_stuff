@@ -15,5 +15,5 @@
 2. Augmented reality (AR) web app
 
 Happy Holidays greeting card (see 'card1.html', 'card2.html, 'card3.html')
-Chinese New Year greeting card (see 'CNYcard.html')
+<br> Chinese New Year greeting card (see 'CNYcard.html')
 
