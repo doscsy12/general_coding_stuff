@@ -1,12 +1,10 @@
 ## Some codes done for fun
 
-
-|   | script                   | description                       |
-|---|--------------------------|-----------------------------------|
-| 1 | merry_xmas               | rotating christmas tree with deco |
-| 2 | card1, card2, card3      | greeting card                     |
-|   | CNYcard                  | greeting card                     |
-|   |                          |                                   |
+|   | script              | description                       | related files      |
+|---|---------------------|-----------------------------------|--------------------|
+| 1 | merry_xmas          | rotating christmas tree with deco |                    |
+| 2 | card1, card2, card3 | greeting card                     | ar-markers, assets |
+|   | CNYcard             | greeting card                     |                    |
 
 1. Merry Christmas
 
