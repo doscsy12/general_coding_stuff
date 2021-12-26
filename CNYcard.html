@@ -1,0 +1,50 @@
+<head>
+    <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+    <script src="assets/aframe-particleplayer-component.min.js"></script>
+    <script src="assets/examples.js"></script>
+    <link rel="stylesheet" href="assets/examples.css"></link>
+    <script src="https://raw.githack.com/jeromeetienne/AR.js/2.1.4/aframe/build/aframe-ar.js"></script>
+    <script src="https://unpkg.com/aframe-look-at-component@0.8.x/dist/aframe-look-at-component.min.js"></script> 
+  </head>
+  <body>
+    
+    <a-scene arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;" cursor="rayOrigin: mouse; fuse: false;" raycaster="objects: .clickable"
+      trigger
+      particleplayer="src: #particles-json; img: #particleTex; dur: 600; count: 100%; scale: 2; pscale: 3; interpolate: false; loop: 3; on: particleplayerstart">
+      
+      <a-assets>
+        <a-asset-item id="particles-json" src="assets/particles-fireworks.json"></a-asset-item>
+        <img src="assets/sparkle.png" id="particleTex">
+        <a-asset-item id="cracker" src="assets/firecracker/Firecracker.glb"></a-asset-item>
+        <a-asset-item id="rat" src="assets/rat/Rat_01.gltf"></a-asset-item>
+        <a-asset-item id="mouse" src="assets/mouse/Mouse_01.gltf"></a-asset-item>
+        <a-asset-item id="woodrat" src="assets/woodrat/Woodrats.gltf"></a-asset-item>
+        <audio id="gongxi" src="assets/GongXiSong.mp3" preload="auto"></audio>
+      </a-assets>
+
+      <a-entity camera></a-entity>
+      <a-marker preset="hiro">
+
+      <!-- firecracker -->
+       <a-entity id="firecracker" position="0 0 0" rotation="-90 0 0" scale="1 1 1" >
+         <a-sound src="#gongxi" autoplay="true"></a-sound>
+
+         <a-text class="clickable" value="Happy\nChinese\nNew\nYear!" position="1.0 0.8 0" font="roboto" color="red" width="10" align="center" look-at='[camera]'
+         ></a-text> 
+
+         <a-entity class="clickable" gltf-model="#cracker" scale="0.04 0.04 0.05" animation="property: position; to: -0.04 -0.04 0.03; loop: 6; dir: alternate; easing: easeInOutCubic; dur: 100; startEvents: click;"
+         animation__rotation="property: rotation; from: 0 -5 0; to: 0 10 0; dir: alternate; loop: 6; easing: easeInOutCubic; dur: 250; startEvents: click"></a-entity> 
+
+         <a-entity class="clickable" gltf-model="#rat" position="-0.4 0 0" rotation="0 -90 5" scale="0.05 0.05 0.05" animation="property: scale; to: 0.06 0.06 0.05; dur: 400; loop: true; easing: easeInOutCubic; dir: alternate;"></a-entity> 
+         <a-entity class="clickable" gltf-model="#mouse" position="-0.7 0 0" rotation="0 90 5" scale="0.002 0.003 0.003" animation="property: scale; to: 0.003 0.0035 0.003; dur: 300; loop: true; easing: easeInOutCubic; dir: alternate;"></a-entity> 
+         <a-entity class="clickable" gltf-model="#woodrat" position="1.8 -0.05 0" rotation="0 -90 0" scale="0.2 0.2 0.2" 
+         ></a-entity> 
+
+         <a-light position="6 14 -2" type="point" color="#f29"></a-light>
+         <a-light position="-6 -14 12" color="#f92" type="point"></a-light>
+
+       </a-entity>
+
+    </a-scene>
+
+  </body>

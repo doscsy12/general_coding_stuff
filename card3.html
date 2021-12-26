@@ -1,0 +1,59 @@
+<!-- Hello and welcome to the workshop 
+"Let's build an augmented reality web app!" 
+Have fun! -->
+
+<!-- This is the code produced during this workshop at Ko-Lab Mechelen -->
+
+
+<head>
+    <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-look-at-component@0.8.x/dist/aframe-look-at-component.min.js"></script> 
+    <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+    <script src="https://raw.githack.com/jeromeetienne/AR.js/2.1.4/aframe/build/aframe-ar.js"></script>
+</head>
+
+<body>
+    <a-scene cursor="rayOrigin: mouse; fuse: false;" raycaster="objects: .clickable"
+    arjs="sourceType: webcam; debugUIEnabled: false;"
+    >
+
+    <a-entity camera></a-entity>
+
+    <a-assets>
+      <a-asset-item id="tophat" src="assets/tophat/scene.gltf"></a-asset-item>
+      <a-image id="background" src="assets/background360.jpg"></a-image>
+    </a-assets>
+
+        <!-- create snow using the particle system component-->
+        <a-entity position="0 2.25 -15" particle-system="preset: snow; particleCount: 3000"></a-entity>
+
+        <a-text value="Merry\nChristmas!" position="0 3.4 -3" align="center" width=7 color="black" font="dejavu" look-at='[camera]'></a-text>
+
+        <!-- the snowman -->
+        <a-marker preset="hiro">
+
+        <a-entity id="snowman" position="0 0 0" rotation="0 0 0" scale="0.5 0.5 0.5"
+        animation="property: position; to: 0 1 -2; loop: 4; dir: alternate; easing: easeInOutCubic; dur: 600; startEvents: click;" 
+        animation__scale="property: scale; to: .5 .55 .5; loop: true; dir: alternate; easing: easeInOutCubic; dur: 600;"
+        animation__rotation="property: rotation; from: 0 0 -15; to: 0 0 15; dir: alternate; loop: true; easing: easeInOutCubic; dur: 1200;"
+        >
+              <!-- tophat -->
+            <a-entity class="clickable" gltf-model="#tophat" position="0 3.2 0" scale=".4 .4 .4"></a-entity>
+           
+            <!-- body -->
+            <a-sphere class="clickable" position="0 1.0 0" radius="1.0" color="#fff"></a-sphere>
+            <a-sphere class="clickable" position="0 2.2 0" radius="0.6" color="#fff"></a-sphere>
+            <a-sphere class="clickable" position="0 2.9 0" radius="0.4" color="#fff"></a-sphere>
+
+            <!-- face -->
+            <a-sphere position="-.1 3 .4" radius="0.05" color="black"></a-sphere>
+            <a-sphere position=".1 3 .4" radius="0.05" color="black"></a-sphere>
+            <a-cone position="0 2.9 .4" rotation="0 90 90" height=0.3 color="orange" radius-bottom="0.1" radius-top="0.01"></a-cone>
+            
+        </a-entity>
+
+        </a-marker>
+
+    </a-scene>
+</body>
+
