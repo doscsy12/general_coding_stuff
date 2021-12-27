@@ -15,3 +15,5 @@
 Happy Holidays greeting card (see 'card1.html', 'card2.html, 'card3.html')
 <br> Chinese New Year greeting card (see 'CNYcard.html')
 
+<img src="https://github.com/doscsy12/general_coding_stuff/blob/main/CNYcard.gif" width="400">
+
