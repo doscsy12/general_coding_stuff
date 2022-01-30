@@ -12,8 +12,11 @@
 
 2. Augmented reality (AR) web app
 
-Happy Holidays greeting card (see 'card1.html', 'card2.html, 'card3.html')
+a. Happy Holidays greeting card (see 'card1.html', 'card2.html, 'card3.html')
 <br> Chinese New Year greeting card (see 'CNYcard.html')
 
-<img src="https://github.com/doscsy12/general_coding_stuff/blob/main/CNYcard.gif" width="400">
+<img src="https://github.com/doscsy12/general_coding_stuff/blob/main/CNY2020card.gif" width="400">
+
+<br> b. 
+<img src="https://github.com/doscsy12/general_coding_stuff/blob/main/CNY2022.gif" width="400">
 
